@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interior Studio - Sign Up</title>
+
+  <style>
+    /* ---------- Global Styles ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f7f5f2, #e0d9d1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ---------- Container ---------- */
+    .container {
+      background: #ffffffd9;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+      width: 380px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ---------- Header ---------- */
+    .container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2e2e2e;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* ---------- Input Fields ---------- */
+    .input-box {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px 40px 12px 15px;
+      border: none;
+      outline: none;
+      background: #f3f3f3;
+      border-radius: 10px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .input-box input:focus {
+      background: #fff;
+      box-shadow: 0 0 0 2px #d5bfa3;
+    }
+
+    .input-box label {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: #777;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    .input-box input:focus + label,
+    .input-box input:not(:placeholder-shown) + label {
+      top: 0;
+      left: 10px;
+      font-size: 12px;
+      color: #b69574;
+      background: #fff;
+      padding: 0 6px;
+    }
+
+    /* ---------- Button ---------- */
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #b69574, #d5bfa3);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #d5bfa3, #b69574);
+      transform: scale(1.03);
+    }
+
+    /* ---------- Message ---------- */
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .message a {
+      color: #b69574;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ---------- Success Popup ---------- */
+    .popup {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .popup.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .popup h3 {
+      color: #2e2e2e;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .popup p {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .popup button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #b69574;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .popup button:hover {
+      background: #a67b5b;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Join Our<br>Urban Vastu Interior<br> Community</h2>
+    <form id="signupForm">
+      <div class="input-box">
+        <input type="text" id="name" required placeholder=" " />
+        <label for="name">Full Name</label>
+      </div>
+      <div class="input-box">
+        <input type="email" id="email" required placeholder=" " />
+        <label for="email">Email Address</label>
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" required placeholder=" " />
+        <label for="password">Password</label>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+      <div class="message">
+        Already have an account? <a href="login.html ">Login</a>
+      </div>
+    </form>
+
+    <div class="popup" id="popup">
+      <h3>Welcome to Interior Studio ✨</h3>
+      <p>Your account has been successfully created.</p>
+      <button onclick="closePopup()">Continue</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("signupForm");
+    const popup = document.getElementById("popup");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (name === "" || email === "" || password === "") {
+        alert("Please fill out all fields!");
+        return;
+      }
+
+      if (!/^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(email)) {
+        alert("Please enter a valid email!");
+        return;
+      }
+
+      // Simulate successful signup
+      popup.classList.add("active");
+      form.reset();
+    });
+
+    function closePopup() {
+      popup.classList.remove("active");
+    }
+  </script>
+</body>
+</html>

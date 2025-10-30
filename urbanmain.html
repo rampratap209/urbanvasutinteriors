@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>first page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
+      animation: fadeInUp 2s ease-out;
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .hero h1 {
+      font-size: 3em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .hero p {
+      margin: 20px 0;
+      font-size: 1.2em;
+    }
+    .btn {
+      background: #c19a6b;
+      color: #fff;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #b38757;
+    }
+
+    /* About */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 80px 10%;
+      align-items: center;
+      background-color: #f8f8f8;
+    }
+    .about img {
+      width: 50%;
+      border-radius: 10px;
+    }
+    .about-content {
+      flex: 1;
+      padding: 40px;
+    }
+    .about-content h2 {
+      color: #c19a6b;
+      margin-bottom: 20px;
+    }
+
+    /* Services */
+    .services {
+      padding: 80px 10%;
+      text-align: center;
+    }
+    .services h2 {
+      color: #c19a6b;
+      margin-bottom: 40px;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 10%;
+    }
+  </style>
+</head>
+<body>
+  <section style="width: 600px;height: 55px; padding-top: 20px;">
+  <a href="login.html" class="btn">LOGIN</a>
+  <a href="singup.html" class="btn">SING UP</a>
+  </section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Urban Vastu Interiors</h1>
+      <p>Balancing Modern Design with Ancient Wisdom</p>
+      <a href="#contact" class="btn">Book a Consultation</a>
+      
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Interior Design">
+    <div class="about-content">
+      <h2>About Us</h2>
+      <p>At Urban Vastu Interiors, we combine modern design principles with the timeless science of Vastu Shastra to create spaces that are aesthetically pleasing, functional, and harmoniously aligned with nature’s energy.</p>
+    </div>
+    </section>
+<section class="about">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Interior Design">
+    <div class="about-content">
+      <h2>About Us</h2>
+      <p>At Urban Vastu Interiors, we combine modern design principles with the timeless science of Vastu Shastra to create spaces that are aesthetically pleasing, functional, and harmoniously aligned with nature’s energy.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Residential Interiors</h3>
+        <p>Transform your home with elegant, vastu-compliant interiors designed for harmony and comfort.</p>
+      </div>
+      <div class="service-card">
+        <h3>Commercial Spaces</h3>
+        <p>Designing inspiring office spaces that enhance productivity and well-being.</p>
+      </div>
+      <div class="service-card">
+        <h3>Vastu Consultation</h3>
+        <p>Professional vastu analysis and recommendations to enhance energy flow.</p>
+      </div>
+      <div class="service-card">
+        <h3>Renovation & Remodeling</h3>
+        <p>Seamless transformations with a blend of modern aesthetics and vastu harmony.</p>
+      </div>
+    </div>
+  </section>
+
+<br>
+<br>
+<!-- estimate wala part -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Estimate for Your Mumbai Home</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet" />
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  p.subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #555;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+  }
+
+  .icon {
+    font-size: 2.5em;
+    color: #aca5ca;
+    margin-bottom: 15px;
+  }
+
+  .card-title {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .card-desc {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+
+
+  .btn:hover {
+    background-color: #45a049;
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.4em;
+    cursor: pointer;
+    color: #999;
+  }
+
+  .close-btn:hover {
+    color: #333;
+  }
+
+  /* Input styles */
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+
+  /* Result display */
+  #estimate-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+  }
+
+  /* Responsive adjustments */
+  @media(max-width: 768px) {
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Get an estimate for your Mumbai home</h1>
+<p class="subtitle">Calculate the approximate cost of doing up your interiors</p>
+
+<div class="cards-container">
+  <!-- Card 1: Full Home -->
+  <div class="card">
+    <div class="icon"><i class="fas fa-home"></i></div>
+    <div class="card-title">Full Home</div>
+    <div class="card-desc">Get an approximate costing for your full home interiors.</div>
+    <button class="btn" onclick="openModal('fullHome')">Calculate</button>
+  </div>
+  <!-- Card 2: Kitchen -->
+  <div class="card">
+    <div class="icon"><i class="fas fa-utensils"></i></div>
+    <div class="card-title">Kitchen</div>
+    <div class="card-desc">Get an approximate costing for your kitchen interior.</div>
+    <button class="btn" onclick="openModal('kitchen')">Calculate</button>
+  </div>
+  <!-- Card 3: Wardrobe -->
+  <div class="card">
+    <div class="icon"><i class="fas fa-wardrobe"></i></div>
+    <div class="card-title">Wardrobe</div>
+    <div class="card-desc">Get an approximate costing for your wardrobe.</div>
+    <button class="btn" onclick="openModal('wardrobe')">Calculate</button>
+  </div>
+</div>
+
+<!-- Modals for each category -->
+<!-- Full Home Modal -->
+<div id="fullHome" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('fullHome')">&times;</span>
+    <h2>Estimate for Full Home</h2>
+    <div class="form-group">
+      <label for="fullHomeArea">Area in sq ft</label>
+      <input type="number" id="fullHomeArea" placeholder="Enter your full home area" min="0" />
+    </div>
+    <button class="btn" onclick="calculateEstimate('fullHome')">Get Estimate</button>
+    <div id="estimate-result-fullHome"></div>
+  </div>
+</div>
+
+<!-- Kitchen Modal -->
+<div id="kitchen" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('kitchen')">&times;</span>
+    <h2>Estimate for Kitchen</h2>
+    <div class="form-group">
+      <label for="kitchenArea">Area in sq ft</label>
+      <input type="number" id="kitchenArea" placeholder="Enter your kitchen area" min="0" />
+    </div>
+    <button class="btn" onclick="calculateEstimate('kitchen')">Get Estimate</button>
+    <div id="estimate-result-kitchen"></div>
+  </div>
+</div>
+
+<!-- Wardrobe Modal -->
+<div id="wardrobe" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('wardrobe')">&times;</span>
+    <h2>Estimate for Wardrobe</h2>
+    <div class="form-group">
+      <label for="wardrobeArea">Area in sq ft</label>
+      <input type="number" id="wardrobeArea" placeholder="Enter your wardrobe area" min="0" />
+    </div>
+    <button class="btn" onclick="calculateEstimate('wardrobe')">Get Estimate</button>
+    <div id="estimate-result-wardrobe"></div>
+  </div>
+</div>
+
+<script>
+  // Function to open modal
+  function openModal(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
+
+  // Function to close modal
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+    // Clear previous results and inputs
+    document.getElementById(`estimate-result-${id}`).innerHTML = '';
+    document.getElementById(`${id}Area`).value = '';
+  }
+
+  // Function to calculate estimate
+  function calculateEstimate(id) {
+    let areaInput = document.getElementById(`${id}Area`);
+    let area = parseFloat(areaInput.value);
+    let resultDiv = document.getElementById(`estimate-result-${id}`);
+
+    if (isNaN(area) || area <= 0) {
+      resultDiv.innerHTML = '<p style="color:red;">Please enter a valid area.</p>';
+      return;
+    }
+
+    // Define cost per sq ft for different categories (example values)
+    const costPerSqFt = {
+      fullHome: 1500,
+      kitchen: 2000,
+      wardrobe: 1000
+    };
+
+    let estimatedCost = area * costPerSqFt[id];
+    resultDiv.innerHTML = `Estimated Cost: <strong>&#8377; ${estimatedCost.toLocaleString()}</strong>`;
+  }
+
+  // Close modals when clicking outside content
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        // Clear previous results and inputs
+        const id = modal.id;
+        document.getElementById(`estimate-result-${id}`).innerHTML = '';
+        document.getElementById(`${id}Area`).value = '';
+      }
+    });
+  }
+</script>
+<br>
+
+
+
+
+   
+<!-- CONTACT US SECTION -->
+
+<section id="contact" class="contact-section">
+  <div style="max-width: 1000px; margin: auto; text-align: center;">
+    <h2 style="font-size: 32px; margin-bottom: 20px; color: #333;">Contact Us</h2>
+    <p style="color: #666; margin-bottom: 40px;">Reach out on WhatsApp or give us a call for the best home design experience</p>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>We’d love to hear about your project and help you create a space that reflects harmony and style. Reach out for consultations or design inquiries.</p>
+
+      <div class="info-block">
+        <h4>📍 Address</h4>
+        <p>Urban Vastu Interiors<br>A-003,Shakti SRA Complex, Bhabrekar Nagar, Charkop Kandivali(West), Mumbai-400067</p>
+      </div>
+      <div class="info-block">
+        <h4>📞 Phone</h4>
+        <div><a href="tel:+919769634492">+91 97696 34492</a></div>
+        <div><a href="tel:+919967679282">+91 99676 79282</a></div>
+      </div>
+      <br>
+      <div class="info-block">
+        <h4>✉️ Email</h4>
+        <p><a href="mailto: urbanvastuinterior.com">urbanvastuinteriors@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <form action="send-message.php" method="POST" id="contactForm">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" name="phone" placeholder="Phone Number" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Optional Embedded Map -->
+  
+<div class="map-container"  >
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6336.697445062623!2d72.82061835492684!3d19.202938531636285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6b8c48b417d%3A0xff1d0ec6a5b1fb90!2sKandivali%2C%20Babrekar%20Nagar%2C%20Kandivali%20West%2C%20Mumbai%2C%20Maharashtra%20400067!5e0!3m2!1sen!2sin!4v1761571906987!5m2!1sen!2sin" 
+  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</section>
+
+<style>
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background-color: #f8f8f8;
+  padding: 80px 10%;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+.contact-info h2 {
+  color: #c19a6b;
+  margin-bottom: 15px;
+}
+.contact-info p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+.info-block h4 {
+  color: #c19a6b;
+  margin-bottom: 5px;
+}
+.info-block p, .info-block a {
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 320px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #c19a6b;
+  outline: none;
+}
+.btn-submit {
+  background: #c19a6b;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.btn-submit:hover {
+  background: #b38757;
+}
+
+.map-container {
+  margin-top: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-form {
+    margin-top: 30px;
+  }
+}
+</style>
+
+<script>
+// Basic form validation and confirmation
+document.getElementById('contactForm').addEventListener('submit', function(e) 
+{
+  e.preventDefault();
+
+  const name = e.target.name.value.trim();
+  const email = e.target.email.value.trim();
+  const message = e.target.message.value.trim();
+
+  if (!name || !email || !message) {
+    alert("Please fill out all required fields.");
+    return;
+  }
+
+  // Optional: AJAX submission or API integration
+  alert("Thank you for contacting Urban Vastu Interiors! We'll get back to you soon.");
+  e.target.reset();
+});
+</script>
+
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How it works</title>
+<!-- Google Fonts for better typography -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet" />
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+
+  .steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .step {
+    background: #f9f9f9;
+    border-radius: 10px;
+    width: 180px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  /* Icon circle styling */
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 2.5em;
+    color: #887da7; /* purple color for icons */
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  .icon-circle:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: scale(1.1);
+  }
+
+  /* Step title styling */
+  .step-title {
+    font-weight: 600;
+    font-size: 1em;
+    margin: 10px 0 5px;
+  }
+
+  /* Step description styling */
+  .step-desc {
+    font-size: 0.9em;
+    color: #555;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .steps-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .step {
+      width: 80%;
+    }
+  }
+</style>
+</head>
+
+<br>
+<h2>How it works</h2>
+
+<div class="steps-container">
+  <!-- Step 1 -->
+  <div class="step">
+    <div class="icon-circle">
+      <i class="fas fa-user-tie"></i>
+    </div>
+    <div class="step-title">Meet a designer</div>
+    <div class="step-desc">Start your journey by meeting our professional designer to discuss your needs.</div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="step">
+    <div class="icon-circle">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    <div class="step-title">(5% payment)</div>
+    <div class="step-desc">Book Livspace with a 5% payment to secure your project and start planning.</div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="step">
+    <div class="icon-circle">
+      <i class="fas fa-paper-plane"></i>
+    </div>
+    <div class="step-title">(60% payment)</div>
+    <div class="step-desc">Execution begins once the initial payment is received, and work starts on your project.</div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="step">
+    <div class="icon-circle">
+      <i class="fas fa-tools"></i>
+    </div>
+    <div class="step-title">(100% payment)</div>
+    <div class="step-desc">Final installations are completed after full payment, ensuring your satisfaction.</div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="step">
+    <div class="icon-circle">
+      <i class="fas fa-home"></i>
+    </div>
+    <div class="step-title">Move in and enjoy!</div>
+    <div class="step-desc">Your project is complete, and you can move in and enjoy your new space!</div>
+  </div>
+</div>
+
+<!-- Optional JavaScript for interaction -->
+<script>
+  // You can add interactivity here if needed
+</script>
+
+<br>
+  <!-- Footer -->
+  <footer>
+    <p>©SINCE 2010 Urban Vastu Interiors | Designed with ♥ by ER.RAMPRATAP SAHANI</p>
+  </footer>
+
+</body>
+</html>
